@@ -1,71 +1,79 @@
 const btnInfo = document.querySelector("#link-info")
 const modal = document.querySelector('#modal')
-const close =  document.querySelector(".close")
-const btnSonModal =document.querySelector('.botao-som-modal')
+const close = document.querySelector(".close")
+const btnSonModal = document.querySelector('.botao-som-modal')
 const videoModal = document.querySelector('#video-modal')
 
 const btnSon = document.querySelector('.botao-som');
 let video = document.querySelector("#video");
 
 const swiper = new Swiper('.slider-wrapper', {
-    loop: true,
-    grabCursor: true,
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-   
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+  loop: true,
+  grabCursor: true,
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    917: {
+      slidesPerview: 3
     },
-    breakpoints:{
-      917:{
-        slidesPerview:3
-      },
-      688:{
-        slidesPerview:2
-      },
-      677:{
-        slidesPerview:1
-      }
+    688: {
+      slidesPerview: 2
+    },
+    677: {
+      slidesPerview: 1
     }
-   
-  });
-  btnSon.addEventListener("click", ()=>{
+  }
 
-    if(video.muted == true ){
-       video.muted = false
-       btnSon.querySelector(".ph-speaker-x").style.display = "none" 
-       btnSon.querySelector(".ph-speaker-high").style.display = "inline" 
-    }else{
-      video.muted = true
-        btnSon.querySelector(".ph-speaker-x").style.display = "inline" 
-       btnSon.querySelector(".ph-speaker-high").style.display = "none" 
-     
-    }
-    
-  })
+});
+btnSon.addEventListener("click", () => {
 
-  btnSonModal.addEventListener('click' ,()=>{
-    if(videoModal.muted == true){
-      videoModal.muted = false
-      btnSonModal.querySelector('.ph-speaker-x').style.display = 'none'
-      btnSonModal.querySelector('.ph-speaker-high').style.display = 'inline'
-    }else{
-      videoModal.muted = true
-      btnSonModal.querySelector('.ph-speaker-x').style.display = 'inline'
-      btnSonModal.querySelector('.ph-speaker-high').style.display = 'none'
-    }
-  })
-  btnInfo.addEventListener('click',()=>{
-    modal.style.display = 'block'
-    video.currentTime = 0
-    video.pause()
-    
-  })
+  if (video.muted == true) {
+    video.muted = false
+    btnSon.querySelector(".ph-speaker-x").style.display = "none"
+    btnSon.querySelector(".ph-speaker-high").style.display = "inline"
+  } else {
+    video.muted = true
+    btnSon.querySelector(".ph-speaker-x").style.display = "inline"
+    btnSon.querySelector(".ph-speaker-high").style.display = "none"
 
-  close.addEventListener('click', ()=>{
-    modal.style.display = 'none'
-    video.currentTime = 0
-    video.play()
-  })
+  }
+
+})
+
+btnSonModal.addEventListener('click', () => {
+  if (videoModal.muted == true) {
+    videoModal.muted = false
+    btnSonModal.querySelector('.ph-speaker-x').style.display = 'none'
+    btnSonModal.querySelector('.ph-speaker-high').style.display = 'inline'
+  } else {
+    videoModal.muted = true
+    btnSonModal.querySelector('.ph-speaker-x').style.display = 'inline'
+    btnSonModal.querySelector('.ph-speaker-high').style.display = 'none'
+  }
+})
+btnInfo.addEventListener('click', () => {
+  modal.style.display = 'block'
+  videoModal.currentTime = 0
+  videoModal.muted = true
+  btnSonModal.querySelector('.ph-speaker-x').style.display = 'inline'
+  btnSonModal.querySelector('.ph-speaker-high').style.display = 'none'
+  video.pause()
+  videoModal.play()
+
+})
+
+close.addEventListener('click', () => {
+  modal.style.display = 'none'
+  video.currentTime = 0
+  video.muted = true
+  btnSon.querySelector(".ph-speaker-x").style.display = "inline"
+  btnSon.querySelector(".ph-speaker-high").style.display = "none"
+  video.play()
+  videoModal.pause()
+})
 

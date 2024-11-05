@@ -653,13 +653,11 @@ footer{
         bottom: -152px;
             }
     .modal-decricao {
-                bottom: 99px;
+        bottom: 168px;
                 margin-left: 26px;
                
             }
-            .info-filme{
-                display: none;
-                    }
+            
                     #info-modal-2{
                         display: none;
                     }
@@ -691,6 +689,22 @@ footer{
     #link-info {
      padding: 6px 6px;
         border-radius: 4px;
+    }
+}
+@media(max-width:834px){
+    .modal-decricao {
+        bottom: 286px;
+        margin-left: 26px;
+    }
+    #modal-filho-1 #info-modal-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    #modal-filho-1 .info-filme p{
+        font-size: 16px;
+        text-align: center;
     }
 }
 
