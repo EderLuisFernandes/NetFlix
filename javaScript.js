@@ -68,10 +68,4 @@ const swiper = new Swiper('.slider-wrapper', {
     video.currentTime = 0
     video.play()
   })
-  
-  window.onload  = ()=>{
-    setTimeout(()=>{
-      const audio = document.querySelector('#audio')
-      audio.play()
-    }, 4000)
-  }
+
