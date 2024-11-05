@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <audio id="audio" src="./src/audio/tudum-netflix-sound.mp3"></audio>
     <header>
         <nav>
             <ul>
@@ -28,7 +29,7 @@
         </nav>
         <div class="nav-direita">
 
-            <p><i class="bi bi-search"></i></p>
+            <p class="pesquisar"><i class="bi bi-search"></i></p>
             <a>infatil</a>
             <p><i class="bi bi-bell"></i></p>
             <div class="nav-direita-img">
@@ -39,20 +40,81 @@
         </div>
 
     </header>
-    <div class="capa">
+
+<div class="capa">
         <img src="./src/img/sing...webp" alt="">
         <p class="capa-descricao">Buster Moon sonha com um espetáculo estelar ao som de Thriller, do Michael Jackson,
             nesta animaçção com personagens da franquia de filmes Sing.</p>
         <a href="#" class="link-assistir"> <i class="bi bi-caret-right-fill"></i> Assitir</a>
         <a href="#" id="link-info"> <i class="bi bi-info-circle"></i>  Mais Informação</a>
 
-    </div>
-    <div class="video-background">
-         <video src="./src/video/SING： THRILLER - Official Trailer (2025).mp4" muted autoplay loop>   </video>  
-         <div class="shadow"></div>
-    </div>
+</div>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
+<div class="video-background">
+         <video src="./src/video/SING： THRILLER - Official Trailer (2025).mp4" muted autoplay loop id="video">   </video>  
+         <div class="shadow"></div>
+</div>
+
+<div id="modal"> 
+
+    <div id="modal-filho">
+       <div class="cabeca-modal">
+      <button class="close">X</button>
+      <div class="video-modal">
+        <video src="./src/video/SING： THRILLER - Official Trailer (2025).mp4" muted autoplay loop  id="video-modal">   </video>  
+        <div class="shadow-modal"></div>
+        </div>
+        <button class="botao-som-modal"  >
+            <i class="ph ph-speaker-x" id="som"></i>
+            <i class="ph ph-speaker-high" id="som" style="display: none;"></i>
+        </button> 
+    </div>
+    <div id="modal-filho-1">
+      <div class="modal-decricao">
+        <button class="assitir"><i class="bi bi-caret-right-fill"></i> Assistir</button>
+        <button class="plus"><i class="ph ph-plus"></i></button>
+        <button class="legal"><i class="ph ph-thumbs-up"></i></button>
+      </div>
+      <div id="info-modal">
+        <div id="info-modal-1">
+            <div class="info-data">
+           <p>2024</p> 
+          <p>14min</p>
+            <p class='logo-idade'><svg id="maturity-rating-24015" viewBox="0 0 100 100" class="svg-icon svg-icon-maturity-rating-24015 "><path fill-rule="evenodd" clip-rule="evenodd" d="M92.3813 0H7.62224C3.41395 0 0 3.41212 0 7.62034V92.3779C0 96.5879 3.41395 100 7.62224 100H92.3813C96.5913 100 100 96.5879 100 92.3779V7.62034C100 3.41212 96.5913 0 92.3813 0Z" fill="#009C4C"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M51 73V26H64.0501V63.9181H85V73H51Z" fill="#FFFEFD"></path><path d="M39.9784 26L47 73H34.4427L33.8308 64.5522H29.4314L28.703 73H16L22.235 26H39.9784ZM33.4812 56.2205C32.8596 50.8983 32.2381 44.3278 31.6165 36.509C30.3734 45.489 29.5965 52.0595 29.2857 56.2205H33.4812Z" fill="white"></path></svg></p>       
+            </div>
+           
+
+          <div class="info-filme">
+            <p>Buster Moon sonha com um espetáculo estelar ao som de Thriller, do Michael Jackson, nesta animação com personagens da franquia de filmes Sing.</p>
+          </div>
+        </div>
+      
+        <div id="info-modal-2">
+            <p>
+         <span>Gênero:</span> Filmes para a família,Musica para crianças
+       </p> 
+            <p><span>Cenas e momentos:</span> Imaginativos, Agradável</p>
+        </div>
+        
+      </div>
+      
+    </div>
+ </div>
+
+</div>
+
+<div id="informacao-idade">
+       <button class="botao-som" >
+        <i class="ph ph-speaker-x" id="som"></i>
+        <i class="ph ph-speaker-high" id="som" style="display: none;"></i>
+    </button> 
+       <span class="idade" >
+        <span class="idade-1"><svg id="maturity-rating-24015" viewBox="0 0 100 100" class="svg-icon svg-icon-maturity-rating-24015 "><path fill-rule="evenodd" clip-rule="evenodd" d="M92.3813 0H7.62224C3.41395 0 0 3.41212 0 7.62034V92.3779C0 96.5879 3.41395 100 7.62224 100H92.3813C96.5913 100 100 96.5879 100 92.3779V7.62034C100 3.41212 96.5913 0 92.3813 0Z" fill="#009C4C"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M51 73V26H64.0501V63.9181H85V73H51Z" fill="#FFFEFD"></path><path d="M39.9784 26L47 73H34.4427L33.8308 64.5522H29.4314L28.703 73H16L22.235 26H39.9784ZM33.4812 56.2205C32.8596 50.8983 32.2381 44.3278 31.6165 36.509C30.3734 45.489 29.5965 52.0595 29.2857 56.2205H33.4812Z" fill="white"></path></svg></span>
+        
+       </span>
+</div>
+        
+<div id="carouselExampleIndicators" class="carousel slide">
         <h2 class="titulo-carrosel">Porque você viu Através das Sombras</h2>
 
         <div class="carousel-inner">
@@ -89,9 +151,11 @@
             <span class="carousel-control-next-icon" aria-hidden="true" id="setaright"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+</div>
 
-    <div id="container-pai">
+
+
+<div id="container-pai">
         <h2 class="titulo-swiper">Serie de Ação e Aventura</h2>
        <div class="container swiper">
              <div class="slider-wrapper"> 
@@ -126,7 +190,10 @@
        
 </div>
 
-       <div id="container-pai">
+
+
+
+<div id="container-pai">
             <h2 class="titulo-swiper">Produção de Hollywood</h2>
        <div class="container swiper">
         <div class="slider-wrapper">
@@ -159,7 +226,9 @@
              <div class="swiper-button-next" id="next"></div>
         </div>
    </div>
-  </div>
+</div>
+
+
 
 <div id="container-pai">
 <h2 class="titulo-swiper">Principais escolhas do dia para você </h2>
@@ -194,10 +263,9 @@
         </div>
     </div>
 </div>
-</div>
 
-    
-  </div>
+
+
 <footer>
         <div class="icon-footer">
             <p><i class="bi bi-facebook"></i></p>
@@ -250,7 +318,14 @@
       </div>
   
       
-    </footer>
+</footer>
+<div id="dev"> ©  Desenvolvido por Éder Luís - 2024</div>
+
+
+
+
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
